@@ -30,7 +30,8 @@ jobs:
 
       - name: Access secret
         run: |
-          echo "Secret length: ${#{{ secrets.TEST_SECRET }}}"
+          secret="${{ secrets.TEST_SECRET }}"
+          echo "Secret length: ${#secret}"
 
       - name: List files
         run: ls -la
